@@ -7,8 +7,10 @@ const notifications = [
     id: 1,
     icon: "MapPin",
     title: "Контакты",
-    text: "Вся контактная информация находится в конце сайта.",
+    text: "Вся контактная информация находится в конце сайта. Также подписывайтесь на ВКонтакте!",
     delay: 5000,
+    link: "https://vk.ru/avolk_74",
+    linkText: "ВКонтакте →",
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ const notifications = [
     title: "Поддержать автора",
     text: "Вы можете поддержать меня по номеру +7 951 439-51-42. Все средства пойдут на улучшение сайта, покупку объективов и качества фото. Спасибо!",
     delay: 8500,
+    link: undefined,
+    linkText: undefined,
   },
 ]
 
@@ -55,6 +59,17 @@ export function NotificationToasts() {
               <div className="flex-1 min-w-0">
                 <p className="font-medium text-sm text-foreground">{n.title}</p>
                 <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{n.text}</p>
+                {n.link && (
+                  <a
+                    href={n.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-primary font-medium mt-2 inline-block hover:underline"
+                    data-clickable
+                  >
+                    {n.linkText}
+                  </a>
+                )}
               </div>
               <button
                 onClick={() => dismiss(n.id)}

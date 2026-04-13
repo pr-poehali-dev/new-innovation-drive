@@ -70,6 +70,23 @@ export function FooterSection() {
               </div>
               <Icon name="ArrowRight" size={16} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
+
+            <a
+              href="https://vk.ru/avolk_74"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              data-clickable
+            >
+              <div className="w-10 h-10 rounded-full bg-background/20 flex items-center justify-center shrink-0">
+                <Icon name="Users" size={18} />
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground group-hover:text-primary-foreground/70 transition-colors">ВКонтакте</p>
+                <p className="font-medium">vk.ru/avolk_74</p>
+              </div>
+              <Icon name="ArrowRight" size={16} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
           </motion.div>
         </div>
 
