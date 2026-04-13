@@ -14,7 +14,7 @@ const albums = [
     title: "Фото косплеев",
     category: "Косплей",
     image: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/files/c7ddaea2-0164-4b56-8eff-5ef4bfc4c276.jpg",
-    link: "#",
+    link: "https://disk.yandex.ru/a/AdlCyjNVQ2p0Gw",
   },
   {
     title: "Рандомные фотографии",
