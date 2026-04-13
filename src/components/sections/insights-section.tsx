@@ -5,28 +5,22 @@ import Icon from "@/components/ui/icon"
 
 const albums = [
   {
-    title: "Городская жизнь — Москва 2024",
+    title: "Фотоохота на людей",
     category: "Репортаж",
-    image: "/visual-storytelling-design-article.jpg",
+    image: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/edce910d-c6da-4959-85d1-3e6c8c7824d2.JPG",
+    link: "https://disk.yandex.ru/a/cdV2QtPnMTGszQ",
+  },
+  {
+    title: "Фото косплеев",
+    category: "Косплей",
+    image: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/files/c7ddaea2-0164-4b56-8eff-5ef4bfc4c276.jpg",
     link: "#",
   },
   {
-    title: "Портреты незнакомцев",
-    category: "Портрет",
-    image: "/personal-branding-digital-marketing.jpg",
-    link: "#",
-  },
-  {
-    title: "Природа и тишина",
-    category: "Пейзаж",
-    image: "/typography-trends-modern-fonts.jpg",
-    link: "#",
-  },
-  {
-    title: "Архитектура городов",
-    category: "Архитектура",
-    image: "/modern-architecture-building-exterior-minimal.jpg",
-    link: "#",
+    title: "Рандомные фотографии",
+    category: "Разное",
+    image: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/07168a54-c46e-4e6e-ac9d-8f117bbabb53.JPG",
+    link: "https://disk.yandex.ru/a/vyZOfpSRhAh9Ow",
   },
 ]
 
