@@ -33,6 +33,9 @@ export default {
 				iris: 'hsl(var(--iris))',
 				lilac: 'hsl(var(--lilac))',
 				lime: 'hsl(var(--lime))',
+				gold: 'hsl(var(--gold))',
+				'gold-light': 'hsl(var(--gold-light))',
+				'gold-dim': 'hsl(var(--gold-dim))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
