@@ -78,7 +78,7 @@ export function HeroSection() {
         transition={{ duration: 1, delay: 0.8 }}
       >
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center text-foreground mix-blend-difference">
-          Каждый кадр — <em className="italic">история</em>.
+          Добро пожаловать в галерею <em className="italic">Волкова Артемия</em>.
         </h1>
         <p className="text-lg md:text-xl text-foreground/70 mix-blend-difference text-center max-w-md">
           Портфолио фотографа. Смотрите, вдохновляйтесь, выбирайте.
