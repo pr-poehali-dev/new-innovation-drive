@@ -29,7 +29,7 @@ export function IntroAnimation() {
             transition={{ duration: 1.0, ease: "easeOut" }}
           >
             <img
-              src="https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/files/bb69465c-9898-4024-8423-cc3e639ef99c.jpg"
+              src="https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/files/12be841d-7ca6-4866-a5ff-d86caed2f5d3.jpg"
               alt="intro"
               className="w-full h-full object-cover"
             />
