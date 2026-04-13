@@ -81,7 +81,7 @@ export function HeroSection() {
           Добро пожаловать в галерею <em className="italic">Волкова Артемия</em>.
         </h1>
         <p className="text-lg md:text-xl text-foreground/70 mix-blend-difference text-center max-w-md">
-          Портфолио фотографа. Смотрите, вдохновляйтесь, выбирайте.
+          Фотография — воспоминания, которые можно изменить так, как тебе хочется.
         </p>
       </motion.div>
 
