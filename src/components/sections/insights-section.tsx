@@ -1,28 +1,32 @@
 import type React from "react"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
-const articles = [
+const albums = [
   {
-    title: "Искусство визуального сторителлинга",
-    category: "Дизайн",
+    title: "Городская жизнь — Москва 2024",
+    category: "Репортаж",
     image: "/visual-storytelling-design-article.jpg",
+    link: "#",
   },
   {
-    title: "Как создать личный бренд онлайн",
-    category: "Стратегия",
+    title: "Портреты незнакомцев",
+    category: "Портрет",
     image: "/personal-branding-digital-marketing.jpg",
+    link: "#",
   },
   {
-    title: "Тренды типографики 2025",
-    category: "Типографика",
+    title: "Природа и тишина",
+    category: "Пейзаж",
     image: "/typography-trends-modern-fonts.jpg",
+    link: "#",
   },
   {
-    title: "Минимализм в дизайне портфолио",
-    category: "Вдохновение",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Архитектура городов",
+    category: "Архитектура",
+    image: "/modern-architecture-building-exterior-minimal.jpg",
+    link: "#",
   },
 ]
 
@@ -43,14 +47,14 @@ export function InsightsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Статьи
+          Альбомы
         </motion.p>
 
         <div className="divide-y divide-border">
-          {articles.map((article, i) => (
+          {albums.map((album, i) => (
             <motion.a
               key={i}
-              href="#"
+              href={album.link}
               className="group flex items-center justify-between py-6 relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -62,12 +66,12 @@ export function InsightsSection() {
               data-clickable
             >
               <div className="flex-1">
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">{article.category}</span>
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">{album.category}</span>
                 <h3 className="font-serif text-xl md:text-2xl text-foreground mt-1 group-hover:text-primary transition-colors">
-                  {article.title}
+                  {album.title}
                 </h3>
               </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+              <Icon name="ExternalLink" size={20} fallback="ArrowRight" />
             </motion.a>
           ))}
         </div>
@@ -88,8 +92,8 @@ export function InsightsSection() {
               transition={{ duration: 0.2 }}
             >
               <img
-                src={articles[hoveredIndex].image || "/placeholder.svg"}
-                alt={articles[hoveredIndex].title}
+                src={albums[hoveredIndex].image || "/placeholder.svg"}
+                alt={albums[hoveredIndex].title}
                 className="w-full h-auto"
               />
             </motion.div>

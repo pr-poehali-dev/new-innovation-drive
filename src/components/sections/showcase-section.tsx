@@ -1,10 +1,26 @@
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Icon from "@/components/ui/icon"
 
-const showcaseImages = [
-  "/modern-architecture-building-exterior-minimal.jpg",
-  "/fashion-model-editorial-portrait-dramatic-lighting.jpg",
-  "/interior-design-minimalist-living-room-natural-lig.jpg",
+const showcaseItems = [
+  {
+    src: "/modern-architecture-building-exterior-minimal.jpg",
+    title: "Архитектура",
+    description: "Геометрия, свет и пространство городских форм",
+    link: "#",
+  },
+  {
+    src: "/fashion-model-editorial-portrait-dramatic-lighting.jpg",
+    title: "Портрет",
+    description: "Эмоции и характер в каждом взгляде",
+    link: "#",
+  },
+  {
+    src: "/interior-design-minimalist-living-room-natural-lig.jpg",
+    title: "Интерьер",
+    description: "Уют и стиль пространств, снятых с душой",
+    link: "#",
+  },
 ]
 
 export function ShowcaseSection() {
@@ -33,10 +49,10 @@ export function ShowcaseSection() {
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {showcaseImages.map((src, i) => (
+          {showcaseItems.map((item, i) => (
             <motion.div
               key={i}
-              className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden group"
+              className="relative group"
               style={{ y: yValues[i] }}
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0 0 0 0)" }}
@@ -46,15 +62,29 @@ export function ShowcaseSection() {
                 delay: i * 0.15,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              data-clickable
             >
-              <motion.img
-                src={src}
-                alt={`Изображение ${i + 1}`}
-                className="w-full h-full object-cover"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              />
+              <div className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden">
+                <motion.img
+                  src={item.src}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex flex-col justify-end p-6">
+                  <h3 className="font-serif text-xl text-white">{item.title}</h3>
+                  <p className="text-white/70 text-sm mt-1">{item.description}</p>
+                  <a
+                    href={item.link}
+                    className="mt-4 inline-flex items-center gap-2 text-white text-sm font-medium hover:gap-3 transition-all"
+                    data-clickable
+                  >
+                    Смотреть альбом
+                    <Icon name="ExternalLink" size={14} />
+                  </a>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
