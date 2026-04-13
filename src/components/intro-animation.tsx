@@ -5,8 +5,8 @@ export function IntroAnimation() {
   const [phase, setPhase] = useState<"photo" | "flash" | "done">("photo")
 
   useEffect(() => {
-    const flashTimer = setTimeout(() => setPhase("flash"), 2200)
-    const doneTimer = setTimeout(() => setPhase("done"), 2900)
+    const flashTimer = setTimeout(() => setPhase("flash"), 3500)
+    const doneTimer = setTimeout(() => setPhase("done"), 4800)
     return () => {
       clearTimeout(flashTimer)
       clearTimeout(doneTimer)
@@ -19,43 +19,32 @@ export function IntroAnimation() {
         <motion.div
           className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden"
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           {/* Фото фотографа */}
           <motion.div
             className="absolute inset-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: phase === "photo" ? 1 : 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 1.0, ease: "easeOut" }}
           >
             <img
-              src="https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/files/c99cb37a-093b-46a7-9bfb-5664e0264162.jpg"
+              src="https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/files/bb69465c-9898-4024-8423-cc3e639ef99c.jpg"
               alt="intro"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40" />
-
-            {/* Текст поверх фото */}
-            <motion.div
-              className="absolute inset-0 flex flex-col items-center justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
-              <p className="text-white/60 text-sm uppercase tracking-[0.3em] mb-3">Добро пожаловать</p>
-              <h1 className="text-white font-serif text-4xl md:text-6xl tracking-tight">Фотограф</h1>
-            </motion.div>
+            <div className="absolute inset-0 bg-black/30" />
 
             {/* Анимация затвора камеры */}
             <motion.div
               className="absolute inset-0 flex items-center justify-center pointer-events-none"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 0, 1, 0] }}
-              transition={{ delay: 1.8, duration: 0.4, times: [0, 0.3, 0.6, 1] }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: [0, 0, 1, 1, 0], scale: [0.8, 0.8, 1, 1.05, 1.1] }}
+              transition={{ delay: 2.2, duration: 1.2, times: [0, 0.2, 0.5, 0.8, 1] }}
             >
-              <div className="w-32 h-32 rounded-full border-4 border-white/80 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full border-2 border-white/60 flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-white/20" />
+              <div className="w-40 h-40 rounded-full border-4 border-white/80 flex items-center justify-center">
+                <div className="w-28 h-28 rounded-full border-2 border-white/60 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-white/20 border border-white/40" />
                 </div>
               </div>
             </motion.div>
@@ -69,8 +58,8 @@ export function IntroAnimation() {
               opacity: phase === "flash" ? [0, 1, 1, 0] : 0,
             }}
             transition={{
-              duration: 0.7,
-              times: [0, 0.2, 0.5, 1],
+              duration: 1.3,
+              times: [0, 0.15, 0.5, 1],
               ease: "easeOut",
             }}
           />
