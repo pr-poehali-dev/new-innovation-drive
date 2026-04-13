@@ -1,17 +1,7 @@
-import { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-
-const footerLinks = [
-  { label: "Галерея", href: "#" },
-  { label: "Альбомы", href: "#" },
-  { label: "Google Фото", href: "#" },
-  { label: "Яндекс Диск", href: "#" },
-]
+import Icon from "@/components/ui/icon"
 
 export function FooterSection() {
-  const [email, setEmail] = useState("")
-
   return (
     <footer className="relative bg-background px-6 py-24 overflow-hidden">
       {/* Gradient blob */}
@@ -21,7 +11,7 @@ export function FooterSection() {
 
       <div className="relative max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-end">
-          {/* Logo and links */}
+          {/* Logo */}
           <div>
             <motion.h2
               className="text-6xl md:text-8xl font-serif text-foreground"
@@ -31,57 +21,60 @@ export function FooterSection() {
             >
               Волков Артемий
             </motion.h2>
-
-            <nav className="flex flex-wrap gap-6 mt-8">
-              {footerLinks.map((link, i) => (
-                <motion.a
-                  key={i}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  data-clickable
-                >
-                  {link.label}
-                </motion.a>
-              ))}
-            </nav>
+            <motion.p
+              className="text-muted-foreground mt-4 text-sm uppercase tracking-widest"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              Фотограф
+            </motion.p>
           </div>
 
-          {/* Email signup */}
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <p className="text-muted-foreground text-sm mb-4">Оставьте email — напишу, когда выйдут новые серии.</p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Введите email"
-                className="flex-1 bg-secondary border-0 rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button
-                type="submit"
-                className="bg-foreground text-background p-3 rounded-lg hover:bg-foreground/90 transition-colors"
-                data-clickable
-              >
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </form>
+          {/* Contacts */}
+          <motion.div
+            className="flex flex-col gap-5"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-muted-foreground text-sm uppercase tracking-widest mb-2">Связаться со мной</p>
+
+            <a
+              href="mailto:pampom.12@mail.ru"
+              className="group flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              data-clickable
+            >
+              <div className="w-10 h-10 rounded-full bg-background/20 flex items-center justify-center shrink-0">
+                <Icon name="Mail" size={18} />
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground group-hover:text-primary-foreground/70 transition-colors">Email</p>
+                <p className="font-medium">pampom.12@mail.ru</p>
+              </div>
+              <Icon name="ArrowRight" size={16} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+
+            <a
+              href="tel:+79514395142"
+              className="group flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              data-clickable
+            >
+              <div className="w-10 h-10 rounded-full bg-background/20 flex items-center justify-center shrink-0">
+                <Icon name="Phone" size={18} />
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground group-hover:text-primary-foreground/70 transition-colors">Телефон</p>
+                <p className="font-medium">+7 951 439-51-42</p>
+              </div>
+              <Icon name="ArrowRight" size={16} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
           </motion.div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">2025 Волков Артемий. Все права защищены.</p>
-          <div className="flex gap-6">
-            <a href="#" className="text-muted-foreground hover:text-foreground text-sm" data-clickable>
-              Конфиденциальность
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground text-sm" data-clickable>
-              Условия
-            </a>
-          </div>
         </div>
       </div>
     </footer>
