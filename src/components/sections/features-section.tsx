@@ -32,7 +32,7 @@ function ShutterAnimation() {
 
 function GenreAnimation() {
   const [genre, setGenre] = useState(0)
-  const genres = ["Портрет", "Пейзаж", "Репортаж"]
+  const genres = ["Портрет", "Пейзаж", "Снимки людей"]
 
   useEffect(() => {
     const interval = setInterval(() => {
