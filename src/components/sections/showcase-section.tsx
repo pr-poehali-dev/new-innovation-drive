@@ -10,7 +10,7 @@ const showcaseItems = [
     link: "https://disk.yandex.ru/a/cdV2QtPnMTGszQ",
   },
   {
-    src: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/files/8588504d-0ef3-4bf5-82ef-ee2f0aa8bdb7.jpg",
+    src: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/files/c7ddaea2-0164-4b56-8eff-5ef4bfc4c276.jpg",
     title: "Фото косплеев",
     description: "Фото моделей, фотосессии и косплеи",
     link: "#",
