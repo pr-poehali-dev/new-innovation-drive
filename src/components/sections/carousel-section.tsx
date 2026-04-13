@@ -1,12 +1,10 @@
 import { motion } from "framer-motion"
 
 const portfolioItems = [
-  "/portfolio-website-design-preview-modern.jpg",
-  "/photography-portfolio-website-clean.jpg",
-  "/architecture-firm-website-minimal.jpg",
-  "/design-agency-portfolio-dark-theme.jpg",
-  "/artist-portfolio-website-creative.jpg",
-  "/writer-portfolio-website-elegant.jpg",
+  "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/b36f7001-747b-4ef4-9da8-dd96770def94.JPG",
+  "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/2d8b847d-1ffa-4ce9-b1be-989834b8ac64.JPG",
+  "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/934513ab-c42d-4e58-a8ae-c4f9d26e9115.JPG",
+  "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/a29ffc61-8e9c-430a-b65e-b3934cc9e455.JPG",
 ]
 
 export function CarouselSection() {
@@ -22,7 +20,7 @@ export function CarouselSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Фотография — это искусство видеть незаметное.
+          Мои лучшие фото.
         </motion.h2>
       </div>
 
