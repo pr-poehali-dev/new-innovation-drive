@@ -11,8 +11,8 @@ const showcaseItems = [
   },
   {
     src: "/fashion-model-editorial-portrait-dramatic-lighting.jpg",
-    title: "Портрет",
-    description: "Эмоции и характер в каждом взгляде",
+    title: "Фото косплеев",
+    description: "Фото моделей, фотосессии и косплеи",
     link: "#",
   },
   {
