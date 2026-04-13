@@ -6,11 +6,13 @@ import { FeaturesSection } from "@/components/sections/features-section"
 import { ShowcaseSection } from "@/components/sections/showcase-section"
 import { CarouselSection } from "@/components/sections/carousel-section"
 import { FooterSection } from "@/components/sections/footer-section"
+import { IntroAnimation } from "@/components/intro-animation"
 
 const Index = () => {
   return (
     <LenisProvider>
       <main className="custom-cursor bg-background">
+        <IntroAnimation />
         <CustomCursor />
         <HeroSection />
         <ManifestoSection />
