@@ -5,6 +5,7 @@ import { ManifestoSection } from "@/components/sections/manifesto-section"
 import { FeaturesSection } from "@/components/sections/features-section"
 import { ShowcaseSection } from "@/components/sections/showcase-section"
 import { CarouselSection } from "@/components/sections/carousel-section"
+import { AboutSection } from "@/components/sections/about-section"
 import { FooterSection } from "@/components/sections/footer-section"
 import { IntroAnimation } from "@/components/intro-animation"
 import { NotificationToasts } from "@/components/notification-toasts"
@@ -21,6 +22,7 @@ const Index = () => {
         <FeaturesSection />
         <ShowcaseSection />
         <CarouselSection />
+        <AboutSection />
         <FooterSection />
       </main>
     </LenisProvider>
