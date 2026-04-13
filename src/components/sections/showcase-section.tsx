@@ -4,9 +4,9 @@ import Icon from "@/components/ui/icon"
 
 const showcaseItems = [
   {
-    src: "/modern-architecture-building-exterior-minimal.jpg",
-    title: "Архитектура",
-    description: "Геометрия, свет и пространство городских форм",
+    src: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/edce910d-c6da-4959-85d1-3e6c8c7824d2.JPG",
+    title: "Фотоохота на людей",
+    description: "Живые эмоции незнакомцев, пойманные в объектив",
     link: "#",
   },
   {
