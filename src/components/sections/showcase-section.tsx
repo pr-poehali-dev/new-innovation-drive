@@ -16,10 +16,10 @@ const showcaseItems = [
     link: "#",
   },
   {
-    src: "/interior-design-minimalist-living-room-natural-lig.jpg",
-    title: "Интерьер",
-    description: "Уют и стиль пространств, снятых с душой",
-    link: "#",
+    src: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/07168a54-c46e-4e6e-ac9d-8f117bbabb53.JPG",
+    title: "Рандомные фотографии",
+    description: "Разные снимки из жизни",
+    link: "https://disk.yandex.ru/a/vyZOfpSRhAh9Ow",
   },
 ]
 
