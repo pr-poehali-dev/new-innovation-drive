@@ -7,7 +7,7 @@ const showcaseItems = [
     src: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/edce910d-c6da-4959-85d1-3e6c8c7824d2.JPG",
     title: "Фотоохота на людей",
     description: "Живые эмоции незнакомцев, пойманные в объектив",
-    link: "#",
+    link: "https://disk.yandex.ru/a/cdV2QtPnMTGszQ",
   },
   {
     src: "/fashion-model-editorial-portrait-dramatic-lighting.jpg",
@@ -77,6 +77,8 @@ export function ShowcaseSection() {
                   <p className="text-white/70 text-sm mt-1">{item.description}</p>
                   <a
                     href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-4 inline-flex items-center gap-2 text-white text-sm font-medium hover:gap-3 transition-all"
                     data-clickable
                   >
