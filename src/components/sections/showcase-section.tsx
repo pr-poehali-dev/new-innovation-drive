@@ -21,6 +21,12 @@ const showcaseItems = [
     description: "Разные снимки из жизни",
     link: "https://disk.yandex.ru/a/vyZOfpSRhAh9Ow",
   },
+  {
+    src: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/81e066bd-b21d-4b3e-b041-e9f62c1c9af0.jpg",
+    title: "Мероприятия и поездки",
+    description: "Фото с мероприятий и путешествий",
+    link: "https://disk.yandex.ru/d/aQIuKM5MhZ4i_Q",
+  },
 ]
 
 export function ShowcaseSection() {
@@ -33,8 +39,9 @@ export function ShowcaseSection() {
   const y1 = useTransform(scrollYProgress, [0, 1], [100, -100])
   const y2 = useTransform(scrollYProgress, [0, 1], [150, -150])
   const y3 = useTransform(scrollYProgress, [0, 1], [80, -80])
+  const y4 = useTransform(scrollYProgress, [0, 1], [120, -120])
 
-  const yValues = [y1, y2, y3]
+  const yValues = [y1, y2, y3, y4]
 
   return (
     <section ref={containerRef} className="bg-background px-6 py-32 overflow-hidden">
