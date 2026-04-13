@@ -22,6 +22,12 @@ const albums = [
     image: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/07168a54-c46e-4e6e-ac9d-8f117bbabb53.JPG",
     link: "https://disk.yandex.ru/a/vyZOfpSRhAh9Ow",
   },
+  {
+    title: "Мероприятия и поездки",
+    category: "Мероприятия",
+    image: "https://cdn.poehali.dev/projects/4ab5cf7f-c33d-4431-8cba-ec52c5633722/bucket/81e066bd-b21d-4b3e-b041-e9f62c1c9af0.jpg",
+    link: "https://disk.yandex.ru/d/aQIuKM5MhZ4i_Q",
+  },
 ]
 
 export function InsightsSection() {
